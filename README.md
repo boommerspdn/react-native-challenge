@@ -14,7 +14,7 @@ A small team directory app built with **Expo SDK 54** (managed workflow) and **T
 
 ## API Key
 
-ReqRes now requires an API key. Get one for free at [reqres.in](https://reqres.in/) and add it to a `.env` file at the project root:
+ReqRes now requires an API key. Get one for free at [reqres.in](https://app.reqres.in/) and add it to a `.env` file at the project root:
 
 ```
 EXPO_PUBLIC_REQRES_API_KEY=your_api_key_here
