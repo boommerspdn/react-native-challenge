@@ -12,6 +12,18 @@ A small team directory app built with **Expo SDK 54** (managed workflow) and **T
 
 ---
 
+## API Key
+
+ReqRes now requires an API key. Get one for free at [reqres.in](https://reqres.in/) and add it to a `.env` file at the project root:
+
+```
+EXPO_PUBLIC_REQRES_API_KEY=your_api_key_here
+```
+
+The app reads this via `process.env.EXPO_PUBLIC_REQRES_API_KEY` and sends it as an `x-api-key` header on every request. Without it, all API calls will return `401`.
+
+---
+
 ## Install
 
 ```bash
@@ -90,7 +102,7 @@ Runs Jest unit tests for the API client (`src/api/__tests__/client.test.ts`).
 - **No local state management library** — `useState` + `useEffect` is sufficient for three screens with independent data needs; adding Redux or Zustand would be premature.
 - **Intentional 1 s fetch delay** — ReqRes responds very quickly, so a 1 s delay is added to make the skeleton loader and pull-to-refresh spinner observable. This is deliberate: the skeleton is a bonus UX feature and would be invisible without the delay on a fast API.
 - **ReqRes does not persist POST data** — the form submits to the real endpoint and treats the `201` response as success, matching the challenge spec. The new teammate will not appear in the list.
-- **API key via env var** — `EXPO_PUBLIC_REQRES_API_KEY` is read from the environment (defaults to an empty string). ReqRes does not require a key for the endpoints used here; the header is included as a best-practice placeholder.
+- **API key via env var** — `EXPO_PUBLIC_REQRES_API_KEY` is read from the environment and sent as `x-api-key` on every request. ReqRes recently moved from a public API to requiring a key; without it all requests return `401`.
 - **Page 1 only for pull-to-refresh** — refreshing always resets to page 1 and replaces the list, which is the expected behavior for a standard pull-to-refresh pattern.
 
 ---
