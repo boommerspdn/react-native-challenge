@@ -18,7 +18,7 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
 }
 
 export const api = {
-  getUsers: () => request<UsersListResponse>('/users?page=1'),
+  getUsers: (page = 1) => request<UsersListResponse>(`/users?page=${page}`),
   getUser: (id: number) => request<SingleUserResponse>(`/users/${id}`),
   createUser: (name: string, job: string) =>
     request<{ id: string; name: string; job: string; createdAt: string }>('/users', {
