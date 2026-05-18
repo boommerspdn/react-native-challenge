@@ -1,6 +1,6 @@
 # Team Directory — React Native Challenge
 
-A small team directory app built with **Expo SDK 54** (managed workflow) and **TypeScript**. Browse colleagues from the [ReqRes](https://reqres.in/) public API, open a profile, and submit a new teammate form.
+A small team directory app built with **Expo SDK 55** (managed workflow) and **TypeScript**. Browse colleagues from the [ReqRes](https://reqres.in/) public API, open a profile, and submit a new teammate form.
 
 ---
 
@@ -68,22 +68,24 @@ Runs Jest unit tests for the API client (`src/api/__tests__/client.test.ts`).
 
 ## Screens
 
-| Screen | Route | Description |
-|--------|-------|-------------|
-| User List | `UserList` | Fetches `GET /users?page=1`, shows avatar + name + email in a `FlatList` |
-| User Detail | `UserDetail` | Fetches `GET /users/:id`, shows full profile |
-| Add Teammate | `AddTeammate` | Form that `POST /users` with name + job |
+| Screen       | Route         | Description                                                              |
+| ------------ | ------------- | ------------------------------------------------------------------------ |
+| User List    | `UserList`    | Fetches `GET /users?page=1`, shows avatar + name + email in a `FlatList` |
+| User Detail  | `UserDetail`  | Fetches `GET /users/:id`, shows full profile                             |
+| Add Teammate | `AddTeammate` | Form that `POST /users` with name + job                                  |
 
 ---
 
 ## Features implemented
 
 **Core requirements**
+
 - User list with loading, error, and empty states
 - User detail with loading and error handling; back navigation via stack header
 - Add Teammate form with client-side validation, loading spinner, inline success/error feedback, and auto-dismiss on success
 
 **Bonus**
+
 - **Skeleton loading** — animated placeholder rows while the first fetch is in flight
 - **Pull-to-refresh** — swipe down on the list to re-fetch page 1
 - **Pagination** — "Load more" button appends subsequent pages using `total_pages` from the API

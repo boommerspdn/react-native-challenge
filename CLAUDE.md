@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Important: Expo Version
 
-This project uses **Expo SDK 54**. Always read the versioned docs at https://docs.expo.dev/versions/v54.0.0/ before writing any code — do not rely on generic Expo knowledge.
+This project uses **Expo SDK 55**. Always read the versioned docs at https://docs.expo.dev/versions/v55.0.0/ before writing any code — do not rely on generic Expo knowledge.
 
 ## Commands
 
@@ -22,7 +22,7 @@ No test runner configured yet.
 
 ## Stack
 
-- **Expo SDK 54** (managed workflow, new architecture enabled)
+- **Expo SDK 55** (managed workflow, new architecture enabled)
 - **React Native 0.81.5** / **React 19**
 - **TypeScript** (strict mode, extends `expo/tsconfig.base`)
 - **React Navigation v7** — `@react-navigation/native` + `@react-navigation/native-stack`
@@ -40,6 +40,7 @@ App.tsx  →  NavigationContainer  →  AppNavigator (native stack)
 ```
 
 Planned `src/` layout:
+
 - `api/client.ts` — single `BASE_URL` constant + typed `fetch` wrapper; all API calls go here
 - `types/index.ts` — shared TypeScript interfaces for API shapes
 - `navigation/AppNavigator.tsx` — stack definition and `RootStackParamList` param types
