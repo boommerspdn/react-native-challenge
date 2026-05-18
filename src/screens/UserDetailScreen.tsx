@@ -68,7 +68,7 @@ export function UserDetailScreen({ route }: Props) {
       contentContainerStyle={styles.container}
       refreshControl={<RefreshControl refreshing={refreshing} onRefresh={() => fetchUser(true)} />}
     >
-      <UserAvatar uri={user.id === 1 ? 'bad-url' : user.avatar} style={styles.avatar} />
+      <UserAvatar uri={user.id === 1 ? 'https://reqres.in/img/faces/invalid.jpg' : user.avatar} style={styles.avatar} />
       <Text style={styles.name}>{user.first_name} {user.last_name}</Text>
       <Text style={styles.email}>{user.email}</Text>
     </ScrollView>
